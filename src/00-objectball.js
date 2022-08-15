@@ -111,5 +111,34 @@ function gameObject() {
             },
         },
 }}};
-console.log(gameObject());
-Object.entries(gameObject());
+// console.log(gameObject());
+// Object.entries(gameObject());
+
+// Example function: logs "Brooklyn Nets"
+
+// function homeTeamName() {
+//     let object = gameObject()
+//     return object['home']['teamName'] 
+//   }
+  
+//   console.log(homeTeamName())
+
+function numPointsScored(playerName) {
+    let game = gameObject();
+    for (let gameKey in game) {
+    //   debugger
+      let teamObj = game[gameKey]
+      for (let teamKey in teamObj) {
+        //   debugger
+        let playerObj = teamObj[teamKey];
+        for (let playerKey in playerObj) {
+            // debugger
+            if (playerKey === playerName) {
+                //  debugger;
+                return playerObj.playerKey.points
+            }
+        }
+      }
+    }
+  }
+  console.log(numPointsScored('Brandan Haywood'));
