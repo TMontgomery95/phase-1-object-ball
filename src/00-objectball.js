@@ -1,8 +1,8 @@
 function gameObject() {
    return {
     home: {
-        teamName: [Brooklyn, Nets],
-        colors: [Black, White],
+        teamName: 'Brooklyn, Nets',
+        colors: ['Black', 'White'],
         players: {
             'Alan Anderson': {
                 number: 0,
@@ -54,7 +54,7 @@ function gameObject() {
                 blocks: 11,
                 slamDunks: 1,
         },
-    },
+    }},
     away: {
         teamName: 'Charlette Hornets',
         colors: ['Turquoise', 'Purple'],
@@ -110,5 +110,6 @@ function gameObject() {
                 slamDunks: 12,
             },
         },
-}}}};
+}}};
 console.log(gameObject());
+Object.entries(gameObject());
